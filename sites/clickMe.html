@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           text-align: center;
+           margin-top: 50px;
+        }
+        .button1{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .counter1{
+            margin-top: 20px;
+            font-size: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <button id = "button1" class="button1" data-action="increment" role="button">CLICK ME</button>
+    <div id="counter1" class="counter1" data-counter="number">0</div>
+    <script>
+        let count = 0;
+        const button1 = document.getElementById("button1")
+        const counter1 = document.getElementById("counter1")
+        button1.onclick = function(){
+            count++;
+            counter1.innerText = count
+        }
+    </script>
+</body>
+</html>
